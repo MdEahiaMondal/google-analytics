@@ -896,9 +896,19 @@
 <button class="bg-green-40" onclick="addToCart()" style="background: aquamarine; padding: 2px">Add to cart</button>
 <button class="bg-green-40" onclick="beginCheckout()" style="background: aquamarine; padding: 2px">Checkout</button>
 <button class="bg-green-40" onclick="purchase()" style="background: aquamarine; padding: 2px">Purchase</button>
-
-
+<button
+    onclick="redirectToApp()"
+    aria-label="Click to redirect to the app link">
+    Redirect after click
+</button>
 <script>
+
+    function redirectToApp() {
+        // Redirecting to the specified URL
+        window.location.href = 'https://stage-api.qataratapp.com/redirect-app-link?referred_id=555555';
+    }
+
+
     function addToCart() {
         gtag("event", "add_to_cart", {
             currency: "USD",
